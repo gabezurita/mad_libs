@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20180819201924) do
 
   create_table "mad_libs", force: :cascade do |t|
+    t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
