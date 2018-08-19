@@ -1,7 +1,7 @@
 require 'byebug'
 
 class MadLib < ApplicationRecord
-  attr_reader :formatted_fields
+  attr_reader :labeled_fields
 
   # this finds the parts of speech (fields) within the given text from the MadLib model
   def field_reg_ex
@@ -9,21 +9,26 @@ class MadLib < ApplicationRecord
   end
 
   def find_fields
-    text.scan(field_reg_ex)
+    text.scan(field_reg_ex).flatten
   end
 
   def count_fields
-    find_fields.each_with_object(Hash.new(0)) { |field, count| count[field] += 1 }
+    find_fields.each_with_object(Hash.new(0)) { |field, count| count[field] += 1}
   end
 
-  def format_fields
-    @formatted_fields = []
-    count_fields.each {|field, count| @formatted_fields << "#{field.first.capitalize} (#{count}):"}
+  def label_fields
+    @labeled_fields = []
+
+    count_fields.each do |field, count|
+      index = 0
+      count.times do
+        @labeled_fields << "#{field.capitalize} (#{index += 1}):"
+      end
+    end
+    @labeled_fields
   end
 
-  def has_field?(field)
-    byebug
-    format_fields
-    @formatted_fields.include? field
+  def has_field?(label)
+    label_fields.include? label
   end
 end
