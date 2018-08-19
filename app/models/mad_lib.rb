@@ -1,0 +1,2 @@
+class MadLib < ApplicationRecord
+end
