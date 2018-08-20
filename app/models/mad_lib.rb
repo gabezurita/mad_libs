@@ -1,6 +1,8 @@
 require 'byebug'
 
 class MadLib < ApplicationRecord
+  has_many :solutions
+  
   attr_reader :labeled_fields
 
   # this finds the parts of speech (fields) within the given text from the MadLib model
