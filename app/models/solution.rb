@@ -11,7 +11,15 @@ class Solution < ApplicationRecord
     @fields[labeled_field] = value
   end
 
-  def resolve
+  def label_formatting_regexp
+    / \([^()]*\):/
+  end
 
+  def resolve
+    @paragraph = mad_lib.text
+    @fields.each do |labeled_field, value|
+      @paragraph.sub!(labeled_field.downcase.sub!(label_formatting_regexp, ''), value[:with].to_s)
+    end
+    @paragraph.delete('{}')
   end
 end
