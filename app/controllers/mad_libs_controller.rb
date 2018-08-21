@@ -10,6 +10,7 @@ class MadLibsController < ApplicationController
   def create
     @mad_lib = MadLib.new(:text => params[:mad_lib][:text])
     if @mad_lib.save
+      flash[:notice] = 'New Mad Lib created'
       redirect_to @mad_lib
     else
       render 'new'
