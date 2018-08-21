@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FinFriend</title>
+    <title>Mad Libs</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -33,8 +33,8 @@
 <body class="container">
   <nav class="container">
     <div class="nav-wrapper">
-        <a href="/reports/new" class="brand-logo"><i class="material-icons">card_membership</i>Mad Libs</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <a href="/reports" class="brand-logo left"><i class="material-icons">child_care</i>Mad Libs</a>
+        <ul id="nav-mobile" class="right">
           <li><%= link_to 'New Mad Lib', root_path %> | <%= link_to 'Report', reports_path %></li>
         </ul>
     </div>
