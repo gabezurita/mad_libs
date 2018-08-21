@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<%= form_for [@mad_lib, @solution], url: mad_lib_solutions_path(@mad_lib, @solution) do |f| %>
+  <% @mad_lib.label_fields.each do |field| %>
+  <%= f.label field %>
+  <%= f.text_field field, value: "" %>
+  <% end %>
+  <%= f.submit "Fill In" %>
+<% end %>
