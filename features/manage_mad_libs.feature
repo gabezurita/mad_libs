@@ -26,7 +26,7 @@ Feature: Manage mad_libs
 
   Feel free to ask questions, especially related to getting your
   environment set up. Questions about implementation may not
-  necessarily be answered ;) Just email josh@optoro.com
+  necessarily be answered ;) Just email jszmajda@optoro.com
 
   Good luck!
 
