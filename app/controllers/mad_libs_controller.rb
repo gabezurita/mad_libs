@@ -5,6 +5,7 @@ class MadLibsController < ApplicationController
 
   def show
     @mad_lib = MadLib.find(params[:id])
+    @solution = @mad_lib.solutions.new
   end
 
   def create
