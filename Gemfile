@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 
 gem 'materialize-sass', '~> 1.0.0.rc2'
+gem 'material_icons' 
 
 # Gems used only for assets and not required
 # in production environments by default.
