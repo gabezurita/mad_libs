@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Madlibs</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Mad Libs</title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
 
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+<body class="container">
+  <nav class="container">
+    <div class="nav-wrapper">
+        <a href="/mad_libs/new" class="brand-logo left"><i class="material-icons">child_care</i>Mad Libs</a>
+        <ul id="nav-mobile" class="right">
+          <li><%= link_to 'New Mad Lib', root_path %> | <%= link_to 'Report', reports_path %></li>
+        </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="blue-text">
+      <% if notice %>
+      <%= notice %>
+  	<% end %>
+    </div>
+
+    <div class="red-text">
+  	  <% if alert %>
+      <%= alert %>
+  	<% end %>
+    </div>
+    <%= yield %>
+  </div>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
 </html>
