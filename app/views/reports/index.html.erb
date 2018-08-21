@@ -1,11 +1,13 @@
+<h5 class="teal-text lighten-1">Usage:</h5>
 <ul>
 <% @mad_libs_report.each do |label, count| %>
 <li><%= label %>: <%= count %></li>
 <%end%>
 </ul>
 
+<h5 class="teal-text lighten-1">Answer:</h5>
 <ul>
-<% @solutions_report.each do |label, count| %>
-<li><%= label %>: <%= count %></li>
+<% @solutions_report.each do |value, count| %>
+<li><%= value %>: <%= count %></li>
 <%end%>
 </ul>
