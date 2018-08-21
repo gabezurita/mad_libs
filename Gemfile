@@ -5,11 +5,12 @@ gem 'rails', '5.1.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg', '~> 0.20'
+gem 'rails_12factor'
 gem 'haml'
 
 gem 'materialize-sass', '~> 1.0.0.rc2'
-gem 'material_icons' 
+gem 'material_icons'
 
 # Gems used only for assets and not required
 # in production environments by default.
