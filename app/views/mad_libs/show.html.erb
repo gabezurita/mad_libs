@@ -4,8 +4,10 @@
 
 <%= form_for [@mad_lib, @solution], url: mad_lib_solutions_path(@mad_lib, @solution) do |f| %>
   <% @mad_lib.label_fields.each do |field| %>
+  <div class="input-field col s12">
   <%= f.label field %>
   <%= f.text_field field, value: "" %>
+  </div>
   <% end %>
   <div class="input-field col s12">
     <button class="btn waves-effect waves-light" type="submit" name="action">Fill In
