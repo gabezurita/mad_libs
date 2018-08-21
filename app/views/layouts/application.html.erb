@@ -40,13 +40,17 @@
     </div>
   </nav>
   <div class="container">
-    <% if notice %>
+    <div class="blue-text">
+      <% if notice %>
       <%= notice %>
   	<% end %>
+    </div>
 
-  	<% if alert %>
+    <div class="red-text">
+  	  <% if alert %>
       <%= alert %>
   	<% end %>
+    </div>
     <%= yield %>
   </div>
   <!--JavaScript at end of body for optimized loading-->
