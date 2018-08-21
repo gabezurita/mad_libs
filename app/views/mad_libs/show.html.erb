@@ -7,5 +7,9 @@
   <%= f.label field %>
   <%= f.text_field field, value: "" %>
   <% end %>
-  <%= f.submit "Fill In" %>
+  <div class="input-field col s12">
+    <button class="btn waves-effect waves-light" type="submit" name="action">Fill In
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
 <% end %>
