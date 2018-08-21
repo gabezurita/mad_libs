@@ -38,6 +38,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'annotate'
+  gem 'byebug'
 end
 
 group :test do

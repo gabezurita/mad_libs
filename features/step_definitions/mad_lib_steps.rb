@@ -4,7 +4,7 @@ end
 
 Then /^it should have the following fields:$/ do |table|
   table.hashes.each do |field|
-    @madlib.has_field?(field[:label]).should be_true
+    @madlib.has_field?(field[:label]).should be true
   end
 end
 
