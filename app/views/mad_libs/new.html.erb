@@ -1,0 +1,5 @@
+<%= form_for @mad_lib, url: {action: "create"} do |f| %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <%= f.submit "Create" %>
+<% end %>
