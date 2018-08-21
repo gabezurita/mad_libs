@@ -38,4 +38,19 @@ class Solution < ApplicationRecord
     end
     @paragraph.delete('{}')
   end
+
+  def self.format_value(value)
+    value[:with].to_s.downcase
+  end
+
+  def self.count_report_fields
+    self.all.reduce(Hash.new(0)) do |hash, solution|
+      solution.fields.each do |field, value|
+        formatted_value = format_value(value)
+        hash[formatted_value] += 1
+      end
+      # hash is accumulator
+      hash
+    end
+  end
 end
