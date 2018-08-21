@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180820002727) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "mad_libs", force: :cascade do |t|
     t.text "text"
     t.datetime "created_at", null: false
@@ -20,10 +23,11 @@ ActiveRecord::Schema.define(version: 20180820002727) do
 
   create_table "solutions", force: :cascade do |t|
     t.text "values"
-    t.integer "mad_lib_id"
+    t.bigint "mad_lib_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mad_lib_id"], name: "index_solutions_on_mad_lib_id"
   end
 
+  add_foreign_key "solutions", "mad_libs"
 end
