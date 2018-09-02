@@ -5,7 +5,7 @@ gem 'rails', '5.1.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg', '~> 0.20'
+gem 'pg'
 gem 'rails_12factor'
 gem 'haml'
 
