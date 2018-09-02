@@ -5,7 +5,7 @@
 #   gem 'postgresql'
 development:
   adapter: postgresql
-  database: my_database_development
+  database: word_games_development
   pool: 5
   timeout: 5000
 
@@ -14,13 +14,13 @@ development:
 # Do not set this db to the same as development or production.
 test: &test
   adapter: postgresql
-  database: my_database_test
+  database: word_games_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  database: my_database_production
+  database: word_games_production
   pool: 5
   timeout: 5000
 
