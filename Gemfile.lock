@@ -234,7 +234,7 @@ DEPENDENCIES
   jquery-rails
   material_icons
   materialize-sass (~> 1.0.0.rc2)
-  pg (~> 0.20)
+  pg
   rails (= 5.1.4)
   rails_12factor
   rspec-rails
