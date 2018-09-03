@@ -1,0 +1,14 @@
+<h1>Created MadLibs</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+  <% @mad_libs.each do |mad_lib| %>
+    <tr>
+      <td><%= mad_lib.text %></td>
+    </tr>
+  <% end %>
+</table>
