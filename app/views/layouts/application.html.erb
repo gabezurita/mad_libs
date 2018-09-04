@@ -25,12 +25,12 @@
     <%= favicon_link_tag asset_path('mad_libs_icon.png'), :rel => 'icon', :type =>  'image/png' %>
   </head>
 
-<body class="container">
-  <nav class="container">
+<body>
+  <nav>
     <div class="nav-wrapper">
         <a href="/mad_libs/new" class="brand-logo left flow-text" style="font-size:5vw"><i class="material-icons">child_care</i>MadLibs</a>
         <ul id="nav-mobile" class="right">
-          <li><%= link_to 'New', root_path %> | <%= link_to 'Browse MadLibs', mad_libs_path %> | <%= link_to 'Word Stats', reports_path %></li>
+          <li id="nav-mobile" class="right" ><%= link_to 'New', root_path %>|<%= link_to 'Browse', mad_libs_path %>|<%= link_to 'Stats', reports_path %></li>
         </ul>
     </div>
   </nav>
