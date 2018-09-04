@@ -112,8 +112,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
-    material_icons (2.2.1)
-      railties (>= 3.2)
     materialize-sass (1.0.0.rc2)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.5.2)
@@ -232,7 +230,6 @@ DEPENDENCIES
   guard-cucumber
   haml
   jquery-rails
-  material_icons
   materialize-sass (~> 1.0.0.rc2)
   pg
   rails (= 5.1.4)
