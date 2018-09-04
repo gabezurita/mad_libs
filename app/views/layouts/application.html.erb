@@ -2,13 +2,9 @@
 <html>
   <head>
     <title>Mad Libs</title>
-    <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -23,21 +19,18 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <%= favicon_link_tag asset_path('mad_libs_icon.png'), :rel => 'icon', :type =>  'image/png' %>
   </head>
 
-<body class="container">
-  <nav class="container">
+<body>
+  <nav>
     <div class="nav-wrapper">
         <a href="/mad_libs/new" class="brand-logo left flow-text" style="font-size:5vw"><i class="material-icons">child_care</i>MadLibs</a>
         <ul id="nav-mobile" class="right">
-          <li><%= link_to 'New', root_path %> | <%= link_to 'Stats', reports_path %></li>
+          <li id="nav-mobile" class="right" ><%= link_to 'New', root_path %>|<%= link_to 'Browse', mad_libs_path %>|<%= link_to 'Stats', reports_path %></li>
         </ul>
     </div>
   </nav>
@@ -55,7 +48,4 @@
     </div>
     <%= yield %>
   </div>
-  <!--JavaScript at end of body for optimized loading-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
 </html>

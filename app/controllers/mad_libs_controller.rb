@@ -1,11 +1,10 @@
 class MadLibsController < ApplicationController
-  def new
-    @mad_lib = MadLib.new
+  def index
+    @mad_libs = MadLib.all
   end
 
-  def show
-    @mad_lib = MadLib.find(params[:id])
-    @solution = @mad_lib.solutions.new
+  def new
+    @mad_lib = MadLib.new
   end
 
   def create
@@ -16,5 +15,10 @@ class MadLibsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @mad_lib = MadLib.find(params[:id])
+    @solution = @mad_lib.solutions.new
   end
 end
